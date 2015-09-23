@@ -1,0 +1,25 @@
+{
+  "app": {
+    "odoo": {
+      "installations": [
+        {
+          "domain": "odoo.riyic.com",
+          "target_path": "/opt/odoo/",
+          "entry_point": "openerp-wsgi.py",
+          "owner": "odoo",
+          "group": "odoogrp",
+          "admin_password": "test",
+          "data_dir": "/opt/odoo/data",
+          "db_user": "odoo_db",
+          "db_name": "odoo_user",
+          "db_password": "b4asdasfuNGag",
+          "db_host": "db"
+        }
+      ]
+    }
+  }, 
+  "run_list":[
+            "recipe[riyic::default]",
+            "recipe[app_odoo::deploy]"
+ ]
+}

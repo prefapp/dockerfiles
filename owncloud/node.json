@@ -1,0 +1,29 @@
+{
+  "riyic": {
+    "system_locale": "es_ES.UTF-8",
+    "updates_check_interval": "never",
+    "server_id": 44,
+    "env": "development"
+  },
+  "app": {
+    "owncloud": {
+      "domain": "test.com",
+      "version": "8.1.2",
+      "dbtype": "sqlite",
+      "dbhost": "db",
+      "dbname": "owncloud_db",
+      "dbuser": "",
+      "dbpassword": "",
+      "adminlogin": "admin",
+      "adminpass": "1Q4cMjzsVY5dVncLNyl3kA",
+      "target_path": "/home/owncloud",
+      "data_dir": "/opt/owncloud_data",
+      "user": "owncloud",
+      "group": "owngrp"
+    }
+  },
+  "run_list": [
+    "recipe[riyic::default]",
+    "recipe[app_owncloud::deploy]"
+  ]
+}
