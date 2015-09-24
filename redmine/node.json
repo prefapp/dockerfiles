@@ -1,0 +1,24 @@
+{
+  "app": {
+    "redmine": {
+        "domain": "redmine.riyic.com",
+        "name": "redmine",
+        "target_path": "/home/redmine/deploy",
+	"user": "redmine",
+    	"group": "redmine",
+    	"dbname": "redminedb",
+    	"dbtype": "mysql",
+    	"dbuser": "redmineuser",
+    	"dbhost": "localhost",
+    	"dbpassword": "mypassword",
+    	"repo_url": "http://www.redmine.org/releases",
+    	"repo_type": "remote_archive",
+    	"revision": "redmine-3.1.0.tar.gz",
+    	"secret_token": "sdaskjjsdfjklsdfjjaskjsf"
+    }  
+  },
+  "run_list":[
+        "recipe[riyic::default]",
+    	"recipe[app_redmine::deploy]"
+ ]
+}
