@@ -1,24 +1,28 @@
 {
+  "riyic": {
+    "updates_check_interval": "never",
+    "system_locale": "en_US.UTF-8",
+    "env": "production"
+  },
   "app": {
     "redmine": {
-        "domain": "redmine.riyic.com",
-        "name": "redmine",
-        "target_path": "/home/redmine/deploy",
-	"user": "redmine",
-    	"group": "redmine",
-    	"dbname": "redminedb",
-    	"dbtype": "mysql",
-    	"dbuser": "redmineuser",
-    	"dbhost": "localhost",
-    	"dbpassword": "mypassword",
-    	"repo_url": "http://www.redmine.org/releases",
-    	"repo_type": "remote_archive",
-    	"revision": "redmine-3.1.0.tar.gz",
-    	"secret_token": "sdaskjjsdfjklsdfjjaskjsf"
-    }  
+      "domain": "test.com",
+      "dbname": "redminedb",
+      "dbuser": "redmineuser",
+      "dbtype": "mysql",
+      "dbhost": "db.local",
+      "repo_url": "http://www.redmine.org/releases",
+      "revision": "redmine-3.1.0.tar.gz",
+      "repo_type": "remote_archive",
+      "target_path": "/home/redmine/deploy",
+      "user": "redmine",
+      "group": "users",
+      "dbpassword": "xtv-TDk-cLz5SwWOfUW-NA",
+      "adminpass": "vvm8i-UzqCLFP34NRSs7vQ"
+    }
   },
-  "run_list":[
-        "recipe[riyic::default]",
-    	"recipe[app_redmine::deploy]"
- ]
+  "run_list": [
+    "recipe[riyic::default]",
+    "recipe[app_redmine::deploy]"
+  ]
 }
